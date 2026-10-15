@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eon for Teams</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap">
+<style>
+  html, body { margin:0; height:100%; background:#000; overflow:hidden; }
+  body { font-family:'DM Sans', Arial, sans-serif; color:#fff; -webkit-font-smoothing:antialiased; }
+  #stage { position:absolute; top:50%; left:50%; width:1920px; height:1080px; transform-origin:0 0; }
+  #stage > section { position:absolute; inset:0; width:1920px; height:1080px; box-sizing:border-box; overflow:hidden;
+    opacity:0; visibility:hidden; transition:opacity .45s ease, visibility 0s linear .45s; }
+  #stage > section.active { opacity:1; visibility:visible; transition:opacity .45s ease; z-index:1; }
+  section, section * { box-sizing:border-box; }
+  section div { display:flex; flex-direction:column; }
+  section h1, section h2, section h3, section p, section ul, section ol { margin:0; }
+  section img, section video { display:block; object-fit:cover; }
+  section svg { display:block; }
+  [data-build-in] { transition:opacity .6s ease, translate .6s cubic-bezier(.2,.7,.2,1); }
+  section:not(.built) [data-build-in] { opacity:0; transition:none; }
+  section:not(.built) [data-build-in^="rise"] { translate:0 40px; }
+  section:not(.built) [data-build-in^="drop"] { translate:0 -40px; }
+  section:not(.built) [data-build-in^="left"] { translate:-40px 0; }
+  section:not(.built) [data-build-in^="right"] { translate:40px 0; }
+  #ui { position:fixed; right:16px; bottom:12px; z-index:5; font:500 13px 'DM Sans', Arial, sans-serif; color:#ffffff80;
+    opacity:0; transition:opacity .3s; pointer-events:none; }
+  body.show-ui #ui { opacity:1; }
+</style>
+</head>
+<body>
+<div id="stage">
+<section id="dbf73312" data-transition="fade" style="background:#000000">
+  <video src="assets/34b42e6ae9282aae6d20a86c17161d47.mp4" poster="assets/f85d78da8d8366c2a873a2efce41f0d7.jpg" muted playsinline preload="auto" aria-label="Aerial shot of three white EVs driving down a highway at dusk toward a city skyline" id="3a41966a" style="position:absolute; top:0; left:720px; width:1200px; height:1080px"></video>
+  <svg xmlns="http://www.w3.org/2000/svg" aria-label="" viewBox="0 0 720 1080" style="position:absolute; top:0; left:0; width:720px; height:1080px"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1f201f" stop-opacity="0"/><stop offset="0.45" stop-color="#ffffff" stop-opacity="0.7"/><stop offset="0.55" stop-color="#ffffff" stop-opacity="0.6"/><stop offset="1" stop-color="#1f201f" stop-opacity="0"/></linearGradient><path id="r" d="M779.43 275.44L659.05 344.96C662.71 362.5 664.65 380.8 664.65 399.46C664.65 493.09 615.81 575.67 542.18 622.79C500.95 649.22 452.04 664.53 399.54 664.53C253.39 664.53 134.42 545.58 134.42 399.46C134.42 327.93 162.95 262.9 209.25 215.19C257.42 165.39 324.93 134.4 399.54 134.4C409.17 134.4 418.73 134.92 428.14 135.97L498.71 13.89L499.09 12.62C467.27 4.33 433.82 0 399.54 0C275.12 0 163.85 57.19 90.51 146.64C33.9 215.56 0 303.67 0 399.54C0 619.8 179.23 799 399.54 799C476.46 799 548.37 777.12 609.39 739.27C723.2 668.78 799 542.82 799 399.54C799 356.23 792.05 314.57 779.28 275.52L779.43 275.44Z"/></defs><g opacity="0.14" fill="none" stroke="url(#g)" stroke-width="2"><use href="#r" transform="matrix(0.866 -0.5 0.5 0.866 -696 834)"/></g></svg>
+  <div data-build-in="rise 1 auto" style="position:absolute; top:0; left:128px; width:640px; height:1080px; display:flex; flex-direction:column; justify-content:center">
+    <div style="display:flex; flex-direction:row; gap:28px; align-items:center">
+      <img src="assets/a24f9945dfab01f71f7828f8220cf908.png" alt="Eon" style="width:180px; height:62px; object-fit:contain">
+      <p style="font-family:'DM Sans', Arial, sans-serif; font-size:32px; line-height:1; color:#ffffff66">×</p>
+      <img src="assets/0580988214a75a60e171527070c8d119.png" alt="Atrios" style="width:144px; height:48px; object-fit:contain">
+    </div>
+    <div style="display:flex; flex-direction:column; gap:24px; padding:56px 0 48px">
+      <div style="display:flex; flex-direction:column">
+        <h1 style="font-family:'DM Sans', Arial, sans-serif; font-size:96px; font-weight:500; line-height:1.02; letter-spacing:-3px; color:#ffffff">On-demand</h1>
+        <h1 style="font-family:'DM Sans', Arial, sans-serif; font-size:96px; font-weight:500; line-height:1.02; letter-spacing:-3px; color:#ffffff">company cars</h1>
+        <h1 style="font-family:'DM Sans', Arial, sans-serif; font-size:96px; font-weight:500; line-height:1.02; letter-spacing:-3px; color:#ffffff; background:linear-gradient(90deg, #edd2f6 0%, #e15cf7 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent">for everyone.</h1>
+      </div>
+      <p style="font-family:'DM Sans', Arial, sans-serif; font-size:36px; line-height:1.3; color:#ffffffcc">Your team's new favourite <span style="color:#e98ff8">perks</span></p>
+    </div>
+    <p style="padding:24px 0 0; font-family:'DM Sans', Arial, sans-serif; font-size:24px; font-weight:500; line-height:1.3; letter-spacing:0.2px; color:#ffffff80; border-top:1px solid #ffffff1f">Eon for Teams · Oct 2026</p>
+  </div>
+</section>
+<section id="program" data-transition="fade" style="background:#000000">
+  <svg xmlns="http://www.w3.org/2000/svg" aria-label="" viewBox="0 0 1920 1080" style="position:absolute; top:0; left:0; width:1920px; height:1080px"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1f201f" stop-opacity="0"/><stop offset="0.45" stop-color="#ffffff" stop-opacity="0.7"/><stop offset="0.55" stop-color="#ffffff" stop-opacity="0.6"/><stop offset="1" stop-color="#1f201f" stop-opacity="0"/></linearGradient><path id="r" d="M779.43 275.44L659.05 344.96C662.71 362.5 664.65 380.8 664.65 399.46C664.65 493.09 615.81 575.67 542.18 622.79C500.95 649.22 452.04 664.53 399.54 664.53C253.39 664.53 134.42 545.58 134.42 399.46C134.42 327.93 162.95 262.9 209.25 215.19C257.42 165.39 324.93 134.4 399.54 134.4C409.17 134.4 418.73 134.92 428.14 135.97L498.71 13.89L499.09 12.62C467.27 4.33 433.82 0 399.54 0C275.12 0 163.85 57.19 90.51 146.64C33.9 215.56 0 303.67 0 399.54C0 619.8 179.23 799 399.54 799C476.46 799 548.37 777.12 609.39 739.27C723.2 668.78 799 542.82 799 399.54C799 356.23 792.05 314.57 779.28 275.52L779.43 275.44Z"/><radialGradient id="pglow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#e15cf7" stop-opacity="0.14"/><stop offset="1" stop-color="#e15cf7" stop-opacity="0"/></radialGradient></defs><g opacity="0.14" fill="none" stroke="url(#g)" stroke-width="2"><use href="#r" transform="matrix(0.866 -0.5 0.5 0.866 1561.52 357.25)"/></g></svg>
+  <img src="assets/64e21c9af3f1cdfc083e73582086fc31.webp" alt="A woman loads the trunk of a black Tesla Model Y parked in the Joshua Tree desert" style="object-fit:cover; object-position:50% 66%; transform-origin:50% 66%; transform:scale(1); position:absolute; top:0; left:0; width:1920px; height:1080px">
+  <div style="position:absolute; top:0; left:0; width:1920px; height:1080px; display:flex; flex-direction:column; background:linear-gradient(180deg, #000000b3 0%, #00000080 35%, #00000099 70%, #000000e6 100%)">
+  </div>
+  <div style="position:absolute; top:240px; left:260px; width:1400px; height:600px; display:flex; flex-direction:column; background:radial-gradient(#000000a6 0%, #00000000 70%)">
+  </div>
+  <div data-build-in="rise 1 auto" style="position:absolute; top:50%; left:128px; width:1664px; display:flex; flex-direction:column; gap:40px; align-items:center; transform:translateY(-50%)">
+    <div style="display:flex; flex-direction:column; gap:24px; align-items:center">
+      <p style="font-family:'DM Sans', Arial, sans-serif; font-size:16px; font-weight:500; letter-spacing:0.2px; text-align:center; color:#ffffffb3">The program</p>
+      <div style="display:flex; flex-direction:column; align-items:center">
+        <h2 style="font-family:'DM Sans', Arial, sans-serif; font-size:72px; font-weight:500; line-height:1.08; letter-spacing:-2px; text-align:center; color:#ffffff">A new kind of</h2>
+        <h2 style="font-family:'DM Sans', Arial, sans-serif; font-size:72px; font-weight:500; line-height:1.08; letter-spacing:-2px; text-align:center; color:#ffffff; background:linear-gradient(90deg, #edd2f6 0%, #e15cf7 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent">employee benefit.</h2>
+      </div>
+    </div>
+    <p style="width:900px; font-family:'DM Sans', Arial, sans-serif; font-size:28px; line-height:1.45; text-align:center; color:#ffffffcc">A benefit unlike anything your team has seen before.<br>Freedom of movement, anywhere, anytime.</p>
+    <div style="display:flex; flex-direction:row; gap:12px; align-items:center">
+      <p style="padding:12px 24px; font-family:'DM Sans', Arial, sans-serif; font-size:24px; font-weight:500; white-space:nowrap; color:#ffffff; background:#0000004d; border:1px solid #ffffff38; border-radius:256px; backdrop-filter:blur(12px)">Flexible</p>
+      <p style="padding:12px 24px; font-family:'DM Sans', Arial, sans-serif; font-size:24px; font-weight:500; white-space:nowrap; color:#ffffff; background:#0000004d; border:1px solid #ffffff38; border-radius:256px; backdrop-filter:blur(12px)">On demand</p>
+      <p style="padding:12px 24px; font-family:'DM Sans', Arial, sans-serif; font-size:24px; font-weight:500; white-space:nowrap; color:#ffffff; background:#0000004d; border:1px solid #ffffff38; border-radius:256px; backdrop-filter:blur(12px)">Travel on and off the clock</p>
+    </div>
+  </div>
+  <img src="assets/a24f9945dfab01f71f7828f8220cf908.png" alt="Eon" style="position:absolute; top:48px; left:64px; width:128px; height:44px; object-fit:contain">
+  <div style="position:absolute; top:54px; left:216px; width:1px; height:32px; display:flex; flex-direction:column; background:#ffffff33">
+  </div>
+  <img src="assets/0580988214a75a60e171527070c8d119.png" alt="Atrios" style="position:absolute; top:55px; left:241px; width:90px; height:30px; object-fit:contain">
+  <p style="position:absolute; top:59px; right:64px; width:400px; font-family:'DM Sans', Arial, sans-serif; font-size:18px; line-height:1.22; text-align:right; color:#ffffffb3">eonrides.com<span style="color:#ffffff59">&nbsp;&nbsp;·&nbsp;&nbsp;</span>Oct, 2026</p>
+</section>
+<section id="benefits" data-transition="fade" style="background:#000000">
+  <video src="assets/18d7ea84c4e0540a778b0d64a12f361b.mp4" poster="assets/e6a72143f510b76ecef3182556aafef9.jpg" muted playsinline preload="auto" aria-label="Dark map of the U.S. where pink Eon car pins pop up city by city across the country, labeled with models like Tesla Cybertruck 2024" style="position:absolute; top:0; right:0; width:1280px; height:1080px"></video>
+  <div style="position:absolute; top:150px; left:128px; width:760px; display:flex; flex-direction:column">
+    <h2 style="width:1116px; font-family:'DM Sans', Arial, sans-serif; font-size:72px; font-weight:500; line-height:1.08; letter-spacing:-2px; color:#ffffff">Freedom to go anywhere, anytime.</h2>
+    <h2 style="width:890px; font-family:'DM Sans', Arial, sans-serif; font-size:72px; font-weight:500; line-height:1.08; letter-spacing:-2px; color:#ffffff; background:linear-gradient(90deg, #edd2f6 0%, #e15cf7 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent">No keys, no handoffs.</h2>
+  </div>
+  <div style="position:absolute; top:410px; left:128px; width:540px; display:flex; flex-direction:column; gap:56px">
+    <div style="display:flex; flex-direction:column; gap:12px">
+      <h3 style="font-family:'DM Sans', Arial, sans-serif; font-size:36px; font-weight:500; line-height:1.15; letter-spacing:-0.5px; color:#ffffff">Nationwide availability</h3>
+      <p style="font-family:'DM Sans', Arial, sans-serif; font-size:24px; line-height:1.45; color:#ffffffa6">Drive Tesla, Rivian, Lucid, Cadillac, and Porsche in all major U.S. cities.</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:12px">
+      <h3 style="font-family:'DM Sans', Arial, sans-serif; font-size:36px; font-weight:500; line-height:1.15; letter-spacing:-0.5px; color:#ffffff">Delivery or pickup anywhere</h3>
+      <p style="font-family:'DM Sans', Arial, sans-serif; font-size:24px; line-height:1.45; color:#ffffffa6">Get the car delivered to your home, office or airport, or pick it up anywhere. All from your phone.</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:12px">
+      <h3 style="font-family:'DM Sans', Arial, sans-serif; font-size:36px; font-weight:500; line-height:1.15; letter-spacing:-0.5px; color:#ffffff">Keyless access&nbsp;</h3>
+      <p style="font-family:'DM Sans', Arial, sans-serif; font-size:24px; line-height:1.45; color:#ffffffa6">Unlock and start the car from the Eon app.&nbsp;<br>No counter, no key handoff.</p>
+    </div>
+  </div>
+  <img src="assets/a24f9945dfab01f71f7828f8220cf908.png" alt="Eon" style="position:absolute; top:48px; left:64px; width:128px; height:44px; object-fit:contain">
+  <div style="position:absolute; top:54px; left:216px; width:1px; height:32px; display:flex; flex-direction:column; background:#ffffff33">
+  </div>
+  <img src="assets/0580988214a75a60e171527070c8d119.png" alt="Atrios" style="position:absolute; top:55px; left:241px; width:90px; height:30px; object-fit:contain">
+  <p style="position:absolute; top:59px; right:64px; width:400px; font-family:'DM Sans', Arial, sans-serif; font-size:18px; line-height:1.22; text-align:right; color:#ffffffb3">eonrides.com<span style="color:#ffffff59">&nbsp;&nbsp;·&nbsp;&nbsp;</span>Oct, 2026</p>
+</section>
+<section id="939662c6" data-transition="fade" style="background:#000000">
+  <div id="b5579a68" style="position:absolute; top:50%; left:128px; width:820px; display:flex; flex-direction:column; gap:40px; transform:translateY(-50%)">
+    <div style="display:flex; flex-direction:column">
+      <h2 style="font-family:'DM Sans', Arial, sans-serif; font-size:72px; font-weight:500; line-height:1.08; letter-spacing:-2px; color:#ffffff">Full control of the car</h2>
+      <h2 style="font-family:'DM Sans', Arial, sans-serif; font-size:72px; font-weight:500; line-height:1.08; letter-spacing:-2px; color:#ffffff; background:linear-gradient(90deg, #edd2f6 0%, #e15cf7 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent">right from the Eon app</h2>
+    </div>
+    <div style="width:540px; display:flex; flex-direction:column; gap:12px">
+      <h3 style="font-family:'DM Sans', Arial, sans-serif; font-size:36px; font-weight:500; line-height:1.15; letter-spacing:-0.5px; color:#ffffff">App controls + FSD included</h3>
+      <p style="font-family:'DM Sans', Arial, sans-serif; font-size:24px; line-height:1.45; color:#ffffffa6">Opt in to Full Self-Driving and make long road trips effortless.</p>
+    </div>
+  </div>
+  <img src="assets/a24f9945dfab01f71f7828f8220cf908.png" alt="Eon" id="2721602b" style="position:absolute; top:48px; left:64px; width:128px; height:44px; object-fit:contain">
+  <div id="678a69ff" style="position:absolute; top:54px; left:216px; width:1px; height:32px; display:flex; flex-direction:column; background:#ffffff33">
+  </div>
+  <img src="assets/0580988214a75a60e171527070c8d119.png" alt="Atrios" id="f038e865" style="position:absolute; top:55px; left:241px; width:90px; height:30px; object-fit:contain">
+  <div id="fsd-glow" style="position:absolute; top:90px; left:990px; width:900px; height:900px; display:flex; flex-direction:column; background:radial-gradient(circle, #e15cf71f 0%, #e15cf700 62%)">
+  </div>
+  <video src="assets/0432aaaceeaba6a7bcc248ea783ee94d.mp4" poster="assets/73d642eb2e1564ad33f86b113a612046.jpg" muted playsinline preload="auto" aria-label="Eon app in an iPhone: on the Car screen Horn is tapped, then the Climate tab opens and the view zooms in on the dial before zooming back out" id="fsd-phone" style="position:absolute; top:32px; left:1044px; width:792px; height:1080px"></video>
+  <p id="ef8370ca" style="position:absolute; top:59px; right:64px; width:400px; font-family:'DM Sans', Arial, sans-serif; font-size:18px; line-height:1.22; text-align:right; color:#ffffffb3">eonrides.com<span style="color:#ffffff59">&nbsp;&nbsp;·&nbsp;&nbsp;</span>Oct, 2026</p>
+</section>
+<section id="employees" data-transition="fade" style="background:#000000">
+  <svg xmlns="http://www.w3.org/2000/svg" aria-label="" viewBox="0 0 1920 1080" style="position:absolute; top:50%; left:50%; width:1920px; height:1080px; transform:translate(-50%, -50%)"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1f201f" stop-opacity="0"/><stop offset="0.45" stop-color="#ffffff" stop-opacity="0.7"/><stop offset="0.55" stop-color="#ffffff" stop-opacity="0.6"/><stop offset="1" stop-color="#1f201f" stop-opacity="0"/></linearGradient><path id="r" d="M779.43 275.44L659.05 344.96C662.71 362.5 664.65 380.8 664.65 399.46C664.65 493.09 615.81 575.67 542.18 622.79C500.95 649.22 452.04 664.53 399.54 664.53C253.39 664.53 134.42 545.58 134.42 399.46C134.42 327.93 162.95 262.9 209.25 215.19C257.42 165.39 324.93 134.4 399.54 134.4C409.17 134.4 418.73 134.92 428.14 135.97L498.71 13.89L499.09 12.62C467.27 4.33 433.82 0 399.54 0C275.12 0 163.85 57.19 90.51 146.64C33.9 215.56 0 303.67 0 399.54C0 619.8 179.23 799 399.54 799C476.46 799 548.37 777.12 609.39 739.27C723.2 668.78 799 542.82 799 399.54C799 356.23 792.05 314.57 779.28 275.52L779.43 275.44Z"/></defs><g opacity="0.14" fill="none" stroke="url(#g)" stroke-width="2"><use href="#r" transform="matrix(0.866 -0.5 0.5 0.866 1561.52 357.25)"/></g></svg>
+  <div style="position:absolute; top:460px; left:128px; width:1664px; height:500px; display:flex; flex-direction:row; gap:32px">
+    <div style="position:relative; width:534px; height:500px; display:flex; flex-direction:column; flex:0 0 auto; align-self:stretch; background:#000000; border-radius:24px; overflow:hidden">
+      <img src="assets/4edc9ed7310837bc3b50466c0bcdd62b.webp" alt="Family loading a Rivian for a weekend trip" style="object-fit:cover; object-position:50% 100%; transform-origin:50% 100%; transform:scale(1); position:absolute; top:1px; left:1px; width:532px; height:498px; border-radius:23px">
+      <div style="position:absolute; top:0; left:0; width:534px; height:500px; display:flex; flex-direction:column; background:linear-gradient(180deg, #00000000 45%, #000000cc 70%, #000000f5 100%); border:1px solid #ffffff33; border-radius:24px">
+      </div>
+      <div style="position:absolute; bottom:32px; left:32px; width:470px; display:flex; flex-direction:column; gap:8px">
+        <p style="font-family:'DM Sans', Arial, sans-serif; font-size:20px; font-weight:500; letter-spacing:0.2px; color:#ffffffcc">Weekends</p>
+        <h3 style="font-family:'DM Sans', Arial, sans-serif; font-size:36px; font-weight:500; line-height:1.15; letter-spacing:-0.5px; color:#ffffff">The Hamptons with friends</h3>
+        <p style="font-family:'DM Sans', Arial, sans-serif; font-size:24px; line-height:1.35; color:#ffffffcc">Effortless beach weekends. Delivered to your door with room for the whole crew.</p>
+      </div>
+    </div>
+    <div style="position:relative; width:533px; height:500px; display:flex; flex-direction:column; flex:0 0 auto; align-self:stretch; background:#000000; border-radius:24px; overflow:hidden">
+      <img src="assets/9574655fd695029f9e1ca146354c4ef8.jpg" alt="Rivian, Cybertruck and Lucid on an open road" style="position:absolute; top:1px; left:1px; width:531px; height:498px; border-radius:23px">
+      <div style="position:absolute; top:0; left:0; width:533px; height:500px; display:flex; flex-direction:column; background:linear-gradient(180deg, #00000000 45%, #000000cc 70%, #000000f5 100%); border:1px solid #ffffff33; border-radius:24px">
+      </div>
+      <div style="position:absolute; bottom:32px; left:32px; width:469px; display:flex; flex-direction:column; gap:8px">
+        <p style="font-family:'DM Sans', Arial, sans-serif; font-size:20px; font-weight:500; letter-spacing:0.2px; color:#ffffffcc">Holidays</p>
+        <h3 style="font-family:'DM Sans', Arial, sans-serif; font-size:36px; font-weight:500; line-height:1.15; letter-spacing:-0.5px; color:#ffffff">Thanksgiving&nbsp;with family</h3>
+        <p style="font-family:'DM Sans', Arial, sans-serif; font-size:24px; line-height:1.35; color:#ffffffcc">Home for the holidays, made easy. Room for the kids and every bag.</p>
+      </div>
+    </div>
+    <div style="position:relative; width:533px; height:500px; display:flex; flex-direction:column; flex:0 0 auto; align-self:stretch; background:#000000; border-radius:24px; overflow:hidden">
+      <img src="assets/64e21c9af3f1cdfc083e73582086fc31.webp" alt="Professional stepping into a Tesla on a city street" style="object-fit:cover; object-position:39.165% 87.426%; transform-origin:39.165% 87.426%; transform:scale(1.2998); position:absolute; top:1px; left:1px; width:531px; height:498px; border-radius:23px">
+      <div id="f5f2789c" style="position:absolute; top:0; left:0; width:533px; height:500px; display:flex; flex-direction:column; background:linear-gradient(180deg, #00000000 45%, #000000cc 70%, #000000f5 100%); border:1px solid #ffffff33; border-radius:24px">
+      </div>
+      <div style="position:absolute; bottom:32px; left:32px; width:469px; display:flex; flex-direction:column; gap:8px">
+        <p style="font-family:'DM Sans', Arial, sans-serif; font-size:20px; font-weight:500; letter-spacing:0.2px; color:#ffffffcc">Getaways</p>
+        <h3 style="font-family:'DM Sans', Arial, sans-serif; font-size:36px; font-weight:500; line-height:1.15; letter-spacing:-0.5px; color:#ffffff">Roadtrips with partner</h3>
+        <p style="font-family:'DM Sans', Arial, sans-serif; font-size:24px; line-height:1.35; color:#ffffffcc">Adventure, fully charged. Room for all the gear and range to get way out there.</p>
+      </div>
+    </div>
+  </div>
+  <div id="p5f01facc5975r0-7afd5bc3" style="position:absolute; top:176px; left:128px; width:1664px; display:flex; flex-direction:column; gap:24px">
+    <p style="font-family:'DM Sans', Arial, sans-serif; font-size:16px; font-weight:500; letter-spacing:0.2px; color:#ffffffb3">Use cases</p>
+    <div style="display:flex; flex-direction:column">
+      <h2 style="font-family:'DM Sans', Arial, sans-serif; font-size:72px; font-weight:500; line-height:1.1; letter-spacing:-1.5px; color:#ffffff">The getaways your team</h2>
+      <div style="display:flex; flex-direction:row">
+        <h2 style="font-family:'DM Sans', Arial, sans-serif; font-size:72px; font-weight:500; line-height:1.1; letter-spacing:-1.5px; color:#ffffff; background:linear-gradient(90deg, #edd2f6 0%, #e15cf7 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent">has been waiting for.</h2>
+      </div>
+    </div>
+  </div>
+  <img src="assets/a24f9945dfab01f71f7828f8220cf908.png" alt="Eon" style="position:absolute; top:48px; left:64px; width:128px; height:44px; object-fit:contain">
+  <div style="position:absolute; top:54px; left:216px; width:1px; height:32px; display:flex; flex-direction:column; background:#ffffff33">
+  </div>
+  <img src="assets/0580988214a75a60e171527070c8d119.png" alt="Atrios" style="position:absolute; top:55px; left:241px; width:90px; height:30px; object-fit:contain">
+  <p style="position:absolute; top:59px; right:64px; width:400px; font-family:'DM Sans', Arial, sans-serif; font-size:18px; line-height:1.22; text-align:right; color:#ffffffb3">eonrides.com<span style="color:#ffffff59">&nbsp;&nbsp;·&nbsp;&nbsp;</span>Oct, 2026</p>
+</section>
+<section id="how" data-transition="fade" style="display:flex; flex-direction:column; gap:40px; padding:176px 128px 128px; background:#000000">
+  <svg xmlns="http://www.w3.org/2000/svg" aria-label="" viewBox="0 0 1920 1080" style="position:absolute; top:0; left:0; width:1920px; height:1080px"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1f201f" stop-opacity="0"/><stop offset="0.45" stop-color="#ffffff" stop-opacity="0.7"/><stop offset="0.55" stop-color="#ffffff" stop-opacity="0.6"/><stop offset="1" stop-color="#1f201f" stop-opacity="0"/></linearGradient><path id="r" d="M779.43 275.44L659.05 344.96C662.71 362.5 664.65 380.8 664.65 399.46C664.65 493.09 615.81 575.67 542.18 622.79C500.95 649.22 452.04 664.53 399.54 664.53C253.39 664.53 134.42 545.58 134.42 399.46C134.42 327.93 162.95 262.9 209.25 215.19C257.42 165.39 324.93 134.4 399.54 134.4C409.17 134.4 418.73 134.92 428.14 135.97L498.71 13.89L499.09 12.62C467.27 4.33 433.82 0 399.54 0C275.12 0 163.85 57.19 90.51 146.64C33.9 215.56 0 303.67 0 399.54C0 619.8 179.23 799 399.54 799C476.46 799 548.37 777.12 609.39 739.27C723.2 668.78 799 542.82 799 399.54C799 356.23 792.05 314.57 779.28 275.52L779.43 275.44Z"/></defs><g opacity="0.14" fill="none" stroke="url(#g)" stroke-width="2"><use href="#r" transform="matrix(0.866 -0.5 0.5 0.866 1561.52 357.25)"/></g></svg>
+  <div style="display:flex; flex-direction:column; gap:24px">
+    <div style="display:flex; flex-direction:row; gap:12px; align-items:center">
+      <p style="font-family:'DM Sans', Arial, sans-serif; font-size:16px; font-weight:500; letter-spacing:0.2px; color:#ffffffb3">How it works</p>
+    </div>
+    <div style="display:flex; flex-direction:column">
+      <h2 style="font-family:'DM Sans', Arial, sans-serif; font-size:72px; font-weight:500; line-height:1.1; letter-spacing:-1.5px; color:#ffffff">From credits to keyless access</h2>
+      <div style="display:flex; flex-direction:row">
+        <h2 style="font-family:'DM Sans', Arial, sans-serif; font-size:72px; font-weight:500; line-height:1.1; letter-spacing:-1.5px; color:#ffffff; background:linear-gradient(90deg, #edd2f6 0%, #e15cf7 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent">in three steps.</h2>
+      </div>
+    </div>
+  </div>
+  <div style="position:absolute; top:460px; left:128px; width:534px; height:500px; display:flex; flex-direction:column; background:linear-gradient(180deg, #17171b 0%, #0e0e11 100%); border:1px solid #ffffff33; border-radius:24px; overflow:hidden">
+    <div style="width:532px; height:386px; display:flex; flex-direction:row; align-items:center; justify-content:center; flex:0 0 auto; background:radial-gradient(ellipse at 50% 100%, #ffffff0d 0%, #00000000 60%); border-bottom:1px solid #232327">
+      <video src="assets/158dbb7b6a9841dda215ff2aedefdeb3.mp4" poster="assets/b44194bc8f4ab6fc9f3f6aed2338ed68.jpg" muted playsinline preload="auto" aria-label="Over a subtle Eon ring-motif pattern, close-up of an iPhone: the account fades in and Eon Credit counts up to $200 with a soft glow" style="width:532px; height:385px; object-fit:cover"></video>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:6px; justify-content:center; flex:1; padding:24px">
+      <p style="font-family:'DM Sans', Arial, sans-serif; font-size:18px; font-weight:500; letter-spacing:0.2px; color:#ffffff80">Step 01</p>
+      <h3 style="font-family:'DM Sans', Arial, sans-serif; font-size:36px; font-weight:500; line-height:1.15; letter-spacing:-0.5px; white-space:nowrap; color:#ffffff">Get your Eon credits</h3>
+    </div>
+  </div>
+  <div style="position:absolute; top:460px; left:694px; width:533px; height:500px; display:flex; flex-direction:column; background:linear-gradient(180deg, #17171b 0%, #0e0e11 100%); border:1px solid #ffffff33; border-radius:24px; overflow:hidden">
+    <div style="width:531px; height:386px; display:flex; flex-direction:row; align-items:center; justify-content:center; flex:0 0 auto; background:radial-gradient(ellipse at 50% 100%, #ffffff0d 0%, #00000000 60%); border-bottom:1px solid #232327">
+      <video src="assets/cd8e006fd46bb05872ac3759d6ca8210.mp4" poster="assets/d473ff0e4085bd6a3699596cf8e7ad81.jpg" muted playsinline preload="auto" aria-label="Eon app dark street map of Soho, New York: price pins pop in, 6 cars from $80 highlights, a Tesla Model Y card slides up and swipes to Lucid Air and Rivian R1T" style="width:531px; height:385px; object-fit:cover"></video>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:6px; justify-content:center; flex:1; padding:24px">
+      <p style="font-family:'DM Sans', Arial, sans-serif; font-size:18px; font-weight:500; letter-spacing:0.2px; color:#ffffff80">Step 02</p>
+      <h3 style="font-family:'DM Sans', Arial, sans-serif; font-size:36px; font-weight:500; line-height:1.15; letter-spacing:-0.5px; white-space:nowrap; color:#ffffff">Reserve a car in the Eon app</h3>
+    </div>
+  </div>
+  <div style="position:absolute; top:460px; left:1259px; width:533px; height:500px; display:flex; flex-direction:column; background:linear-gradient(180deg, #17171b 0%, #0e0e11 100%); border:1px solid #ffffff33; border-radius:24px; overflow:hidden">
+    <div style="width:531px; height:386px; display:flex; flex-direction:row; align-items:center; justify-content:center; flex:0 0 auto; background:radial-gradient(ellipse at 50% 100%, #ffffff0d 0%, #00000000 60%); border-bottom:1px solid #232327">
+      <video src="assets/c84d7932fed56e04b6cb0553b9660503.mp4" poster="assets/e5227765aea38eb8e3092961ed824cab.jpg" muted playsinline preload="auto" aria-label="Eon app in an iPhone: on the Car screen Horn is tapped, then the Climate tab opens and the view zooms in on the dial before zooming back out" style="width:531px; height:385px; object-fit:cover"></video>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:6px; justify-content:center; flex:1; padding:24px">
+      <p style="font-family:'DM Sans', Arial, sans-serif; font-size:18px; font-weight:500; letter-spacing:0.2px; color:#ffffff80">Step 03</p>
+      <h3 style="font-family:'DM Sans', Arial, sans-serif; font-size:36px; font-weight:500; line-height:1.15; letter-spacing:-0.5px; white-space:nowrap; color:#ffffff">Enjoy all Eon perks</h3>
+    </div>
+  </div>
+  <img src="assets/a24f9945dfab01f71f7828f8220cf908.png" alt="Eon" id="e7-hmg7h" style="position:absolute; top:48px; left:64px; width:128px; height:44px; object-fit:contain">
+  <div id="e8-hmg7h" style="position:absolute; top:54px; left:216px; width:1px; height:32px; display:flex; flex-direction:column; background:#ffffff33">
+  </div>
+  <img src="assets/0580988214a75a60e171527070c8d119.png" alt="Atrios" id="e9-hmg7h" style="position:absolute; top:55px; left:241px; width:90px; height:30px; object-fit:contain">
+  <p id="e10-hmg7h" style="position:absolute; top:59px; right:64px; width:400px; font-family:'DM Sans', Arial, sans-serif; font-size:18px; line-height:1.22; text-align:right; color:#ffffffb3">eonrides.com<span style="color:#ffffff59">&nbsp;&nbsp;·&nbsp;&nbsp;</span>Oct, 2026</p>
+</section>
+<section id="multiplier" data-transition="fade" style="display:flex; flex-direction:column; gap:40px; padding:176px 128px 128px; background:#000000">
+  <svg xmlns="http://www.w3.org/2000/svg" aria-label="" viewBox="0 0 1920 1080" style="position:absolute; top:0; left:0; width:1920px; height:1080px"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1f201f" stop-opacity="0"/><stop offset="0.45" stop-color="#ffffff" stop-opacity="0.7"/><stop offset="0.55" stop-color="#ffffff" stop-opacity="0.6"/><stop offset="1" stop-color="#1f201f" stop-opacity="0"/></linearGradient><path id="r" d="M779.43 275.44L659.05 344.96C662.71 362.5 664.65 380.8 664.65 399.46C664.65 493.09 615.81 575.67 542.18 622.79C500.95 649.22 452.04 664.53 399.54 664.53C253.39 664.53 134.42 545.58 134.42 399.46C134.42 327.93 162.95 262.9 209.25 215.19C257.42 165.39 324.93 134.4 399.54 134.4C409.17 134.4 418.73 134.92 428.14 135.97L498.71 13.89L499.09 12.62C467.27 4.33 433.82 0 399.54 0C275.12 0 163.85 57.19 90.51 146.64C33.9 215.56 0 303.67 0 399.54C0 619.8 179.23 799 399.54 799C476.46 799 548.37 777.12 609.39 739.27C723.2 668.78 799 542.82 799 399.54C799 356.23 792.05 314.57 779.28 275.52L779.43 275.44Z"/><linearGradient id="mp" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#edd2f6" stop-opacity="0.9"/><stop offset="1" stop-color="#e15cf7" stop-opacity="0.3"/></linearGradient><radialGradient id="mglow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#e15cf7" stop-opacity="0.16"/><stop offset="1" stop-color="#e15cf7" stop-opacity="0"/></radialGradient></defs><ellipse cx="1060" cy="640" rx="780" ry="360" fill="url(#mglow)"/><g fill="none" stroke-width="2"><use href="#r" opacity="0.14" stroke="url(#g)" transform="matrix(0.866 -0.5 0.5 0.866 1561.52 357.25)"/><use href="#r" opacity="0.4" stroke="url(#mp)" stroke-width="4" transform="translate(1760 965) rotate(35) scale(0.14) translate(-399.5 -399.5)"/></g></svg>
+  <div style="display:flex; flex-direction:column; gap:24px; align-items:center">
+    <div style="display:flex; flex-direction:column; align-items:center">
+      <h2 style="font-family:'DM Sans', Arial, sans-serif; font-size:72px; font-weight:500; line-height:1.1; letter-spacing:-1.5px; text-align:center; color:#ffffff">Give your team more benefits&nbsp;</h2>
+      <div style="display:flex; flex-direction:row; justify-content:center">
+        <h2 style="font-family:'DM Sans', Arial, sans-serif; font-size:72px; font-weight:500; line-height:1.1; letter-spacing:-1.5px; text-align:center; color:#ffffff; background:linear-gradient(90deg, #edd2f6 0%, #e15cf7 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent">while multiplying the value of every dollar.</h2>
+      </div>
+    </div>
+  </div>
+  <video src="assets/0c19506ad1450ea3e6d251101ecdc221.mp4" poster="assets/28448de4b91526418419843fa69fbd4a.jpg" muted playsinline preload="auto" aria-label="Bar chart: company cost $1,000, Eon credits $1,400, a 1.4x value, +40%" style="position:absolute; top:400px; left:134px; width:1652px; height:598px; object-fit:contain"></video>
+  <img src="assets/a24f9945dfab01f71f7828f8220cf908.png" alt="Eon" style="position:absolute; top:48px; left:64px; width:128px; height:44px; object-fit:contain">
+  <div style="position:absolute; top:54px; left:216px; width:1px; height:32px; display:flex; flex-direction:column; background:#ffffff33">
+  </div>
+  <img src="assets/0580988214a75a60e171527070c8d119.png" alt="Atrios" style="position:absolute; top:55px; left:241px; width:90px; height:30px; object-fit:contain">
+  <p style="position:absolute; top:59px; right:64px; width:400px; font-family:'DM Sans', Arial, sans-serif; font-size:18px; line-height:1.22; text-align:right; color:#ffffffb3">eonrides.com<span style="color:#ffffff59">&nbsp;&nbsp;·&nbsp;&nbsp;</span>Oct, 2026</p>
+</section>
+<section id="allocation" data-transition="fade" style="background:#000000">
+  <svg xmlns="http://www.w3.org/2000/svg" aria-label="" viewBox="0 0 1920 1080" style="position:absolute; top:0; left:0; width:1920px; height:1080px"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1f201f" stop-opacity="0"/><stop offset="0.45" stop-color="#ffffff" stop-opacity="0.7"/><stop offset="0.55" stop-color="#ffffff" stop-opacity="0.6"/><stop offset="1" stop-color="#1f201f" stop-opacity="0"/></linearGradient><path id="r" d="M779.43 275.44L659.05 344.96C662.71 362.5 664.65 380.8 664.65 399.46C664.65 493.09 615.81 575.67 542.18 622.79C500.95 649.22 452.04 664.53 399.54 664.53C253.39 664.53 134.42 545.58 134.42 399.46C134.42 327.93 162.95 262.9 209.25 215.19C257.42 165.39 324.93 134.4 399.54 134.4C409.17 134.4 418.73 134.92 428.14 135.97L498.71 13.89L499.09 12.62C467.27 4.33 433.82 0 399.54 0C275.12 0 163.85 57.19 90.51 146.64C33.9 215.56 0 303.67 0 399.54C0 619.8 179.23 799 399.54 799C476.46 799 548.37 777.12 609.39 739.27C723.2 668.78 799 542.82 799 399.54C799 356.23 792.05 314.57 779.28 275.52L779.43 275.44Z"/></defs><g opacity="0.14" fill="none" stroke="url(#g)" stroke-width="2"><use href="#r" transform="matrix(0.866 -0.5 0.5 0.866 1561.52 357.25)"/></g></svg>
+  <div style="position:absolute; top:440px; left:128px; width:1664px; height:640px; display:flex; flex-direction:column">
+    <div style="position:relative; width:1664px; height:640px; display:flex; flex-direction:column; align-self:stretch; background:#0e0e10; border-top:1px solid #1c1c20; border-right:1px solid #1c1c20; border-left:1px solid #1c1c20; border-radius:24px 24px 0 0; overflow:hidden">
+      <video src="assets/408d7437c4fcdc00d394db028d7dbffb.mp4" poster="assets/17b496a2e83ee55f13259e971c376f38.jpg" muted playsinline preload="auto" aria-label="Eon employer dashboard: credits issued $1,400, 7 employees receiving, next issue Nov 1" style="width:1662px; height:168px"></video>
+      <div style="display:flex; flex-direction:column; padding:8px 37px 0">
+        <div style="height:56px; display:flex; flex-direction:row; align-items:center; justify-content:space-between">
+          <p style="font-family:'DM Sans', Arial, sans-serif; font-size:24px; font-weight:500; line-height:1; color:#ffffff">Monthly allocation</p>
+        </div>
+        <div style="height:48px; display:flex; flex-direction:row; align-items:center; border-bottom:1px solid #ffffff12">
+          <p style="width:560px; font-family:'DM Sans', Arial, sans-serif; font-size:20px; font-weight:500; line-height:1; letter-spacing:1.5px; text-transform:uppercase; color:#ffffff59">Employee</p>
+          <p style="width:360px; font-family:'DM Sans', Arial, sans-serif; font-size:20px; font-weight:500; line-height:1; letter-spacing:1.5px; text-transform:uppercase; color:#ffffff59">Team</p>
+          <p style="flex:1; font-family:'DM Sans', Arial, sans-serif; font-size:20px; font-weight:500; line-height:1; letter-spacing:1.5px; text-transform:uppercase; text-align:right; color:#ffffff59">Per employee</p>
+        </div>
+        <div style="height:56px; display:flex; flex-direction:row; align-items:center; border-bottom:1px solid #ffffff0f">
+          <div style="width:560px; display:flex; flex-direction:row; gap:16px; align-items:center">
+            <div style="width:28px; height:28px; display:flex; flex-direction:column; background:#2a2a2f; border-radius:14px">
+            </div>
+            <div style="width:180px; height:10px; display:flex; flex-direction:column; background:#2a2a2f; border-radius:5px">
+            </div>
+          </div>
+          <div style="width:360px; display:flex; flex-direction:row">
+            <div style="width:110px; height:10px; display:flex; flex-direction:column; background:#202024; border-radius:5px">
+            </div>
+          </div>
+          <p style="flex:1; font-family:'DM Sans', Arial, sans-serif; font-size:24px; font-weight:500; line-height:1; text-align:right; color:#ffffffe6">$200</p>
+        </div>
+        <div style="height:56px; display:flex; flex-direction:row; align-items:center; border-bottom:1px solid #ffffff0f">
+          <div style="width:560px; display:flex; flex-direction:row; gap:16px; align-items:center">
+            <div style="width:28px; height:28px; display:flex; flex-direction:column; background:#2a2a2f; border-radius:14px">
+            </div>
+            <div style="width:140px; height:10px; display:flex; flex-direction:column; background:#2a2a2f; border-radius:5px">
+            </div>
+          </div>
+          <div style="width:360px; display:flex; flex-direction:row">
+            <div style="width:90px; height:10px; display:flex; flex-direction:column; background:#202024; border-radius:5px">
+            </div>
+          </div>
+          <p style="flex:1; font-family:'DM Sans', Arial, sans-serif; font-size:24px; font-weight:500; line-height:1; text-align:right; color:#ffffffe6">$200</p>
+        </div>
+        <div style="height:56px; display:flex; flex-direction:row; align-items:center; border-bottom:1px solid #ffffff0f">
+          <div style="width:560px; display:flex; flex-direction:row; gap:16px; align-items:center">
+            <div style="width:28px; height:28px; display:flex; flex-direction:column; background:#2a2a2f; border-radius:14px">
+            </div>
+            <div style="width:210px; height:10px; display:flex; flex-direction:column; background:#2a2a2f; border-radius:5px">
+            </div>
+          </div>
+          <div style="width:360px; display:flex; flex-direction:row">
+            <div style="width:130px; height:10px; display:flex; flex-direction:column; background:#202024; border-radius:5px">
+            </div>
+          </div>
+          <p style="flex:1; font-family:'DM Sans', Arial, sans-serif; font-size:24px; font-weight:500; line-height:1; text-align:right; color:#ffffffe6">$200</p>
+        </div>
+        <div style="height:56px; display:flex; flex-direction:row; align-items:center; border-bottom:1px solid #ffffff0f">
+          <div style="width:560px; display:flex; flex-direction:row; gap:16px; align-items:center">
+            <div style="width:28px; height:28px; display:flex; flex-direction:column; background:#2a2a2f; border-radius:14px">
+            </div>
+            <div style="width:160px; height:10px; display:flex; flex-direction:column; background:#2a2a2f; border-radius:5px">
+            </div>
+          </div>
+          <div style="width:360px; display:flex; flex-direction:row">
+            <div style="width:100px; height:10px; display:flex; flex-direction:column; background:#202024; border-radius:5px">
+            </div>
+          </div>
+          <p style="flex:1; font-family:'DM Sans', Arial, sans-serif; font-size:24px; font-weight:500; line-height:1; text-align:right; color:#ffffffe6">$200</p>
+        </div>
+        <div style="height:56px; display:flex; flex-direction:row; align-items:center; border-bottom:1px solid #ffffff0f">
+          <div style="width:560px; display:flex; flex-direction:row; gap:16px; align-items:center">
+            <div style="width:28px; height:28px; display:flex; flex-direction:column; background:#2a2a2f; border-radius:14px">
+            </div>
+            <div style="width:190px; height:10px; display:flex; flex-direction:column; background:#2a2a2f; border-radius:5px">
+            </div>
+          </div>
+          <div style="width:360px; display:flex; flex-direction:row">
+            <div style="width:120px; height:10px; display:flex; flex-direction:column; background:#202024; border-radius:5px">
+            </div>
+          </div>
+          <p style="flex:1; font-family:'DM Sans', Arial, sans-serif; font-size:24px; font-weight:500; line-height:1; text-align:right; color:#ffffffe6">$200</p>
+        </div>
+        <div style="height:56px; display:flex; flex-direction:row; align-items:center; border-bottom:1px solid #ffffff0f">
+          <div style="width:560px; display:flex; flex-direction:row; gap:16px; align-items:center">
+            <div style="width:28px; height:28px; display:flex; flex-direction:column; background:#2a2a2f; border-radius:14px">
+            </div>
+            <div style="width:150px; height:10px; display:flex; flex-direction:column; background:#2a2a2f; border-radius:5px">
+            </div>
+          </div>
+          <div style="width:360px; display:flex; flex-direction:row">
+            <div style="width:85px; height:10px; display:flex; flex-direction:column; background:#202024; border-radius:5px">
+            </div>
+          </div>
+          <p style="flex:1; font-family:'DM Sans', Arial, sans-serif; font-size:24px; font-weight:500; line-height:1; text-align:right; color:#ffffffe6">$200</p>
+        </div>
+      </div>
+      <div style="position:absolute; bottom:0; left:0; width:1662px; height:300px; display:flex; flex-direction:column; background:linear-gradient(180deg, #00000000 0%, #000000b3 55%, #000000 100%)">
+      </div>
+    </div>
+  </div>
+  <div style="position:absolute; top:176px; left:128px; width:1664px; display:flex; flex-direction:column; gap:24px; align-items:center">
+    <p style="font-family:'DM Sans', Arial, sans-serif; font-size:16px; font-weight:500; letter-spacing:0.2px; text-align:center; color:#ffffffb3">Employer setup</p>
+    <div style="display:flex; flex-direction:column; align-items:center">
+      <h2 style="font-family:'DM Sans', Arial, sans-serif; font-size:72px; font-weight:500; line-height:1.1; letter-spacing:-1.5px; text-align:center; color:#ffffff">A flexible benefit,</h2>
+      <h2 style="font-family:'DM Sans', Arial, sans-serif; font-size:72px; font-weight:500; line-height:1.1; letter-spacing:-1.5px; text-align:center; color:#ffffff; background:linear-gradient(90deg, #edd2f6 0%, #e15cf7 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent">with predictable monthly costs.</h2>
+    </div>
+  </div>
+  <img src="assets/a24f9945dfab01f71f7828f8220cf908.png" alt="Eon" style="position:absolute; top:48px; left:64px; width:128px; height:44px; object-fit:contain">
+  <div style="position:absolute; top:54px; left:216px; width:1px; height:32px; display:flex; flex-direction:column; background:#ffffff33">
+  </div>
+  <img src="assets/0580988214a75a60e171527070c8d119.png" alt="Atrios" style="position:absolute; top:55px; left:241px; width:90px; height:30px; object-fit:contain">
+  <p style="position:absolute; top:59px; right:64px; width:400px; font-family:'DM Sans', Arial, sans-serif; font-size:18px; line-height:22px; text-align:right; color:#ffffffb3">eonrides.com<span style="color:#ffffff59">&nbsp;&nbsp;·&nbsp;&nbsp;</span>Oct, 2026</p>
+</section>
+<section id="employers" data-transition="fade" style="display:flex; flex-direction:column; gap:36px; padding:176px 128px 128px; background:#000000">
+  <svg xmlns="http://www.w3.org/2000/svg" aria-label="" viewBox="0 0 1920 1080" style="position:absolute; top:0; left:0; width:1920px; height:1080px"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1f201f" stop-opacity="0"/><stop offset="0.45" stop-color="#ffffff" stop-opacity="0.7"/><stop offset="0.55" stop-color="#ffffff" stop-opacity="0.6"/><stop offset="1" stop-color="#1f201f" stop-opacity="0"/></linearGradient><path id="r" d="M779.43 275.44L659.05 344.96C662.71 362.5 664.65 380.8 664.65 399.46C664.65 493.09 615.81 575.67 542.18 622.79C500.95 649.22 452.04 664.53 399.54 664.53C253.39 664.53 134.42 545.58 134.42 399.46C134.42 327.93 162.95 262.9 209.25 215.19C257.42 165.39 324.93 134.4 399.54 134.4C409.17 134.4 418.73 134.92 428.14 135.97L498.71 13.89L499.09 12.62C467.27 4.33 433.82 0 399.54 0C275.12 0 163.85 57.19 90.51 146.64C33.9 215.56 0 303.67 0 399.54C0 619.8 179.23 799 399.54 799C476.46 799 548.37 777.12 609.39 739.27C723.2 668.78 799 542.82 799 399.54C799 356.23 792.05 314.57 779.28 275.52L779.43 275.44Z"/></defs><g opacity="0.14" fill="none" stroke="url(#g)" stroke-width="2"><use href="#r" transform="matrix(0.866 -0.5 0.5 0.866 1561.52 357.25)"/></g></svg>
+  <div style="display:flex; flex-direction:column; gap:24px">
+    <div style="display:flex; flex-direction:row; gap:12px; align-items:center">
+      <p style="font-family:'DM Sans', Arial, sans-serif; font-size:16px; font-weight:500; letter-spacing:0.2px; color:#ffffffb3">Why employers choose it</p>
+    </div>
+    <div style="display:flex; flex-direction:row; gap:22px">
+      <h2 style="font-family:'DM Sans', Arial, sans-serif; font-size:72px; font-weight:500; line-height:1.1; letter-spacing:-1.5px; color:#ffffff">One benefit.</h2>
+      <h2 style="font-family:'DM Sans', Arial, sans-serif; font-size:72px; font-weight:500; line-height:1.1; letter-spacing:-1.5px; color:#ffffff; background:linear-gradient(90deg, #edd2f6 0%, #e15cf7 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; padding-bottom:0.14em; margin-bottom:-0.14em">Multiple wins.</h2>
+    </div>
+  </div>
+  <img src="assets/49054ab1e4cf18db2d8d0e66b02b6760.png" alt="Three cards: a full-card photo of a family loading a Rivian for a weekend trip, then Make employees feel valued. Support life beyond the office with a perk employees can enjoy. Then a benefits list (health insurance covered, 401(k) match 4%, wellness stipend $75 a month, commuter benefit pre-tax) with Eon credit at $200 a month highlighted, then More competitive benefit packages. Offer a distinctive perk that candidates will actually remember. Then a vertical Instagram-style post by maya.r with the caption Big Sur weekend on my company's Eon perk, car showed up at my door Friday, no rental counter, #perksofthejob; with 248 likes, then Build a brand people love. Turn your benefits program into real-life moments worth sharing." style="position:absolute; top:400px; left:128px; width:1664px; height:530px; object-fit:contain">
+  <img src="assets/a24f9945dfab01f71f7828f8220cf908.png" alt="Eon" id="e7-rhil79" style="position:absolute; top:48px; left:64px; width:128px; height:44px; object-fit:contain">
+  <div id="e8-rhil79" style="position:absolute; top:54px; left:216px; width:1px; height:32px; display:flex; flex-direction:column; background:#ffffff33">
+  </div>
+  <img src="assets/0580988214a75a60e171527070c8d119.png" alt="Atrios" id="e9-rhil79" style="position:absolute; top:55px; left:241px; width:90px; height:30px; object-fit:contain">
+  <p id="e10-rhil79" style="position:absolute; top:59px; right:64px; width:400px; font-family:'DM Sans', Arial, sans-serif; font-size:18px; line-height:22px; text-align:right; color:#ffffffb3">eonrides.com<span style="color:#ffffff59">&nbsp;&nbsp;·&nbsp;&nbsp;</span>Oct, 2026</p>
+</section>
+<section id="recap" data-transition="fade" style="background:#000000">
+  <div id="e1-h96zo8" style="position:absolute; top:662px; left:972px; width:820px; height:196px; display:flex; flex-direction:row; gap:36px; align-items:center; padding:28px 56px; background:linear-gradient(180deg, #17171b 0%, #0e0e11 100%); border:1px solid #ffffff33; border-radius:24px; overflow:hidden">
+    <div style="width:96px; height:96px; display:flex; flex-direction:row; align-items:center; justify-content:center; flex:0 0 auto; background:#ffffff0d; border:1px solid #ffffff1f; border-radius:24px">
+      <svg xmlns="http://www.w3.org/2000/svg" aria-label="" viewBox="0 0 24 24" style="width:48px; height:48px"><defs><linearGradient id="sf0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#edd2f6"/><stop offset="1" stop-color="#e15cf7"/></linearGradient></defs><path fill="#ffffff" d="M2.5 15.6v-2.7c0-.9.6-1.7 1.5-1.9l2.3-.6 2.6-3.1c.5-.6 1.2-.9 1.9-.9h3.9c.7 0 1.4.3 1.9.8l2.9 3.1 1.6.4c.9.2 1.5 1 1.5 1.9v3c0 .6-.4 1-1 1h-1.2a2.6 2.6 0 0 0-5.2 0H9.6a2.6 2.6 0 0 0-5.2 0H3.5c-.6 0-1-.4-1-1z"/><circle cx="7" cy="16.6" r="1.9" fill="#ffffff"/><circle cx="17" cy="16.6" r="1.9" fill="#ffffff"/><path fill="#0e0e11" d="M9.6 8.2 7.9 10.4h4.2V7.9h-1.6c-.4 0-.7.1-.9.3zM13.4 7.9v2.5h4.1l-1.9-2.1c-.2-.2-.5-.4-.8-.4z"/></svg>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:12px; flex:1">
+      <h3 style="font-family:'DM Sans', Arial, sans-serif; font-size:36px; font-weight:500; line-height:1.15; letter-spacing:-0.5px; white-space:nowrap; color:#ffffff">Nationwide availability</h3>
+      <p style="font-family:'DM Sans', Arial, sans-serif; font-size:24px; line-height:1.4; color:#ffffffb3">Drive Tesla, Rivian, Lucid, Cadillac and Porsche in major U.S. cities.</p>
+    </div>
+  </div>
+  <div id="e2-h96zo8" style="position:absolute; top:50%; left:128px; width:820px; height:196px; display:flex; flex-direction:row; gap:36px; align-items:center; padding:28px 56px; background:linear-gradient(180deg, #17171b 0%, #0e0e11 100%); border:1px solid #ffffff33; border-radius:24px; transform:translateY(-50%); overflow:hidden">
+    <div style="width:96px; height:96px; display:flex; flex-direction:row; align-items:center; justify-content:center; flex:0 0 auto; background:#ffffff0d; border:1px solid #ffffff1f; border-radius:24px">
+      <svg xmlns="http://www.w3.org/2000/svg" aria-label="" viewBox="0 0 24 24" style="width:48px; height:48px"><defs><linearGradient id="sf1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#edd2f6"/><stop offset="1" stop-color="#e15cf7"/></linearGradient></defs><circle cx="12" cy="12" r="10" fill="#ffffff"/><path d="M12 5.8v12.4M15.1 8.6c-.5-.9-1.6-1.4-3.1-1.4-1.8 0-3 .9-3 2.2 0 3.3 6.3 1.6 6.3 5 0 1.4-1.3 2.4-3.3 2.4-1.6 0-2.8-.6-3.3-1.6" fill="none" stroke="#0e0e11" stroke-width="2" stroke-linecap="round"/></svg>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:12px; flex:1">
+      <h3 style="font-family:'DM Sans', Arial, sans-serif; font-size:36px; font-weight:500; line-height:1.15; letter-spacing:-0.5px; white-space:nowrap; color:#ffffff; background:linear-gradient(90deg, #edd2f6 0%, #e15cf7 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent">40% more value</h3>
+      <p style="font-family:'DM Sans', Arial, sans-serif; font-size:24px; line-height:1.4; color:#ffffffb3">Every $1 spent becomes $1.40 in Eon credits.</p>
+    </div>
+  </div>
+  <div id="e3-h96zo8" style="position:absolute; top:662px; left:128px; width:820px; height:196px; display:flex; flex-direction:row; gap:36px; align-items:center; padding:28px 56px; background:linear-gradient(180deg, #17171b 0%, #0e0e11 100%); border:1px solid #ffffff33; border-radius:24px; overflow:hidden">
+    <div style="width:96px; height:96px; display:flex; flex-direction:row; align-items:center; justify-content:center; flex:0 0 auto; background:#ffffff0d; border:1px solid #ffffff1f; border-radius:24px">
+      <svg xmlns="http://www.w3.org/2000/svg" aria-label="" viewBox="0 0 24 24" style="width:48px; height:48px"><defs><linearGradient id="sf2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#edd2f6"/><stop offset="1" stop-color="#e15cf7"/></linearGradient></defs><path fill="#ffffff" d="M12 21.2c-.3 0-.6-.1-.8-.3C6.4 17 2.2 13.4 2.2 8.9 2.2 5.9 4.5 3.6 7.4 3.6c1.9 0 3.5 1 4.6 2.6 1.1-1.6 2.7-2.6 4.6-2.6 2.9 0 5.2 2.3 5.2 5.3 0 4.5-4.2 8.1-9 12-.2.2-.5.3-.8.3z"/></svg>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:12px; flex:1">
+      <h3 style="font-family:'DM Sans', Arial, sans-serif; font-size:36px; font-weight:500; line-height:1.15; letter-spacing:-0.5px; white-space:nowrap; color:#ffffff">Loved by employees</h3>
+      <p style="font-family:'DM Sans', Arial, sans-serif; font-size:24px; line-height:1.4; color:#ffffffb3">A benefit employees look forward to and use again and again.</p>
+    </div>
+  </div>
+  <div id="e4-h96zo8" style="position:absolute; top:442px; left:972px; width:820px; height:196px; display:flex; flex-direction:row; gap:36px; align-items:center; padding:28px 56px; background:linear-gradient(180deg, #17171b 0%, #0e0e11 100%); border:1px solid #ffffff33; border-radius:24px; overflow:hidden">
+    <div style="width:96px; height:96px; display:flex; flex-direction:row; align-items:center; justify-content:center; flex:0 0 auto; background:#ffffff0d; border:1px solid #ffffff1f; border-radius:24px">
+      <svg xmlns="http://www.w3.org/2000/svg" aria-label="" viewBox="0 0 24 24" style="width:48px; height:48px"><defs><linearGradient id="sf3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#edd2f6"/><stop offset="1" stop-color="#e15cf7"/></linearGradient></defs><path fill="#ffffff" d="M10 3.5c.3 0 .5.2.6.5l1 3.9c.3 1.3 1.3 2.3 2.6 2.6l3.9 1c.3.1.5.3.5.6s-.2.5-.5.6l-3.9 1c-1.3.3-2.3 1.3-2.6 2.6l-1 3.9c-.1.3-.3.5-.6.5s-.5-.2-.6-.5l-1-3.9c-.3-1.3-1.3-2.3-2.6-2.6l-3.9-1c-.3-.1-.5-.3-.5-.6s.2-.5.5-.6l3.9-1c1.3-.3 2.3-1.3 2.6-2.6l1-3.9c.1-.3.3-.5.6-.5zM18.6 1.6c.2 0 .3.1.3.3l.4 1.5c.1.5.5.9 1 1l1.5.4c.2 0 .3.1.3.3s-.1.3-.3.3l-1.5.4c-.5.1-.9.5-1 1l-.4 1.5c0 .2-.1.3-.3.3s-.3-.1-.3-.3l-.4-1.5c-.1-.5-.5-.9-1-1l-1.5-.4c-.2 0-.3-.1-.3-.3s.1-.3.3-.3l1.5-.4c.5-.1.9-.5 1-1l.4-1.5c0-.2.1-.3.3-.3z"/></svg>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:12px; flex:1">
+      <h3 style="font-family:'DM Sans', Arial, sans-serif; font-size:36px; font-weight:500; line-height:1.15; letter-spacing:-0.5px; white-space:nowrap; color:#ffffff">Eon Perks included</h3>
+      <p style="font-family:'DM Sans', Arial, sans-serif; font-size:24px; line-height:1.4; color:#ffffffb3">Door delivery, in-app car controls and optional FSD.</p>
+    </div>
+  </div>
+  <img src="assets/a24f9945dfab01f71f7828f8220cf908.png" alt="Eon" id="e5-h96zo8" style="position:absolute; top:48px; left:64px; width:128px; height:44px; object-fit:contain">
+  <div id="e6-h96zo8" style="position:absolute; top:54px; left:216px; width:1px; height:32px; display:flex; flex-direction:column; background:#ffffff33">
+  </div>
+  <img src="assets/0580988214a75a60e171527070c8d119.png" alt="Atrios" id="e7-h96zo8" style="position:absolute; top:55px; left:241px; width:90px; height:30px; object-fit:contain">
+  <p id="e8-h96zo8" style="position:absolute; top:59px; right:64px; width:400px; font-family:'DM Sans', Arial, sans-serif; font-size:18px; line-height:1.22; text-align:right; color:#ffffffb3">eonrides.com<span style="color:#ffffff59">&nbsp;&nbsp;·&nbsp;&nbsp;</span>Oct, 2026</p>
+  <div id="p8b72b8a3be89r0_1_0-3c2b235e" style="position:absolute; top:315px; left:128px; width:1664px; display:flex; flex-direction:row; gap:18px; justify-content:center"><h2 style="font-family:'DM Sans', Arial, sans-serif; font-size:72px; font-weight:500; line-height:1.1; letter-spacing:-1.5px; color:#ffffff">Eon for</h2><h2 style="font-family:'DM Sans', Arial, sans-serif; font-size:72px; font-weight:500; line-height:1.1; letter-spacing:-1.5px; color:#ffffff; background:linear-gradient(90deg, #edd2f6 0%, #e15cf7 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; padding-bottom:0.14em; margin-bottom:-0.14em">Teams</h2></div>
+  <p id="c47b4b7a" style="position:absolute; top:278px; left:128px; width:1664px; font-family:'DM Sans', Arial, sans-serif; font-size:16px; font-weight:500; letter-spacing:0.2px; text-align:center; color:#ffffffb3">Recap</p>
+</section>
+<section id="cover" data-transition="fade" style="background:#000000">
+  <video src="assets/6e5428b36ca50f7c6cc4c1e3b6c2ed3e.mp4" poster="assets/1761652d18f4c894bde8fd5bdcaa6619.jpg" muted playsinline preload="auto" aria-label="A woman walks up to a white Tesla Model Y on a tree-lined brownstone street and drives off down the cobblestone street, then the shot fades to black" style="position:absolute; top:0; left:0; width:1920px; height:1080px"></video>
+  <div id="cover-bottom-ov" style="position:absolute; bottom:0; left:50%; width:1920px; height:780px; display:flex; flex-direction:column; background:linear-gradient(180deg, #00000000 0%, #00000066 45%, #000000b3 100%); transform:translateX(-50%)">
+  </div>
+  <div style="position:absolute; top:320px; left:160px; width:1600px; height:440px; display:flex; flex-direction:column; background:radial-gradient(#0000008c 0%, #00000000 70%)">
+  </div>
+  <div data-build-in="fade 1 auto" style="position:absolute; top:50%; left:128px; width:1664px; display:flex; flex-direction:column; gap:40px; align-items:center; transform:translateY(-50%)">
+    <div style="display:flex; flex-direction:row; gap:32px; align-items:center">
+      <img src="assets/a24f9945dfab01f71f7828f8220cf908.png" alt="Eon" style="width:210px; height:72px; object-fit:contain">
+      <p style="font-family:'DM Sans', Arial, sans-serif; font-size:36px; line-height:1; color:#ffffff">×</p>
+      <img src="assets/0580988214a75a60e171527070c8d119.png" alt="Atrios" style="width:168px; height:56px; object-fit:contain">
+    </div>
+    <div style="display:flex; flex-direction:column; align-items:center">
+      <h2 style="font-family:'DM Sans', Arial, sans-serif; font-size:76px; font-weight:500; line-height:1.08; letter-spacing:-2px; text-align:center; color:#ffffff">Give every employee</h2>
+      <h2 style="font-family:'DM Sans', Arial, sans-serif; font-size:76px; font-weight:500; line-height:1.08; letter-spacing:-2px; text-align:center; color:#ffffff; background:linear-gradient(90deg, #edd2f6 0%, #e15cf7 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent">the freedom of a company car.</h2>
+    </div>
+    <p style="font-family:'DM Sans', Arial, sans-serif; font-size:32px; line-height:1.3; text-align:center; color:#ffffffcc">Minus the burden of having any cars.</p>
+    <p style="font-family:'DM Sans', Arial, sans-serif; font-size:28px; line-height:1.3; text-align:center; color:#ffffffe6">Rei Vardi · <span style="color:#e98ff8">rei@eonrides.com</span></p>
+  </div>
+</section>
+</div>
+<div id="ui"><span id="count"></span> &nbsp;·&nbsp; ← → to navigate &nbsp;·&nbsp; F fullscreen</div>
+<script>
+(() => {
+  const stage = document.getElementById('stage');
+  const slides = [...stage.children];
+  const count = document.getElementById('count');
+  let cur = -1, timers = [];
+
+  function fit() {
+    const s = Math.min(innerWidth / 1920, innerHeight / 1080);
+    stage.style.transform = `scale(${s}) translate(-50%, -50%)`;
+  }
+  addEventListener('resize', fit); fit();
+
+  function go(n) {
+    n = Math.max(0, Math.min(slides.length - 1, n));
+    if (n === cur) return;
+    timers.forEach(clearTimeout); timers = [];
+    if (cur >= 0) {
+      const old = slides[cur];
+      old.classList.remove('active');
+      setTimeout(() => { if (!old.classList.contains('active')) {
+        old.classList.remove('built');
+        old.querySelectorAll('[data-build-in]').forEach(e => e.style.transitionDelay = '');
+        old.querySelectorAll('video').forEach(v => { v.pause(); try { v.currentTime = 0; } catch (e) {} });
+      } }, 500);
+    }
+    cur = n;
+    const s = slides[cur];
+    s.classList.remove('built');
+    s.querySelectorAll('[data-build-in]').forEach(e => {
+      const order = parseInt((e.dataset.buildIn.split(/\s+/)[1]) || '1', 10);
+      e.style.transitionDelay = (0.15 + (order - 1) * 0.35) + 's';
+    });
+    s.classList.add('active');
+    void s.offsetWidth;
+    requestAnimationFrame(() => s.classList.add('built'));
+    s.querySelectorAll('video').forEach(v => { try { v.currentTime = 0; } catch (e) {} v.play().catch(() => {}); });
+    // preload next slide's videos
+    const nx = slides[cur + 1];
+    if (nx) nx.querySelectorAll('video').forEach(v => v.load && v.preload !== 'auto' && (v.preload = 'auto'));
+    count.textContent = (cur + 1) + ' / ' + slides.length;
+    history.replaceState(null, '', '#' + (cur + 1));
+  }
+
+  addEventListener('keydown', e => {
+    if (['ArrowRight', 'ArrowDown', 'PageDown', ' ', 'Enter'].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+    else if (['ArrowLeft', 'ArrowUp', 'PageUp', 'Backspace'].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+    else if (e.key === 'Home') go(0);
+    else if (e.key === 'End') go(slides.length - 1);
+    else if (e.key === 'f' || e.key === 'F') {
+      document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen().catch(() => {});
+    }
+  });
+  addEventListener('click', e => go(e.clientX > innerWidth / 3 ? cur + 1 : cur - 1));
+  let tx = null;
+  addEventListener('touchstart', e => tx = e.touches[0].clientX, { passive: true });
+  addEventListener('touchend', e => {
+    if (tx === null) return;
+    const dx = e.changedTouches[0].clientX - tx; tx = null;
+    if (Math.abs(dx) > 40) go(dx < 0 ? cur + 1 : cur - 1);
+  });
+  let hideT;
+  addEventListener('mousemove', () => {
+    document.body.classList.add('show-ui'); clearTimeout(hideT);
+    hideT = setTimeout(() => document.body.classList.remove('show-ui'), 1800);
+  });
+  addEventListener('hashchange', () => go((parseInt(location.hash.slice(1), 10) || 1) - 1));
+  go((parseInt(location.hash.slice(1), 10) || 1) - 1);
+})();
+</script>
+</body>
+</html>
